@@ -1,10 +1,11 @@
-
 /// All Supported Keyboards Languages
 enum KeyboardLanguages {
   english,
   urdu,
   sindhi,
   symbolic,
+  marathi,
+  hindhi
   // numeric,
 }
 
@@ -19,10 +20,14 @@ enum KeyboardsTypes {
   numericKeyboard,
   symbolic1,
   symbolic2,
+  hindhiKeyboard1,
+  hindhiKeyboard2,
+  marathiKeyboard1,
+  marathiKeyboard2
 }
 
 /// All Keys Type
-enum KeyTypes{
+enum KeyTypes {
   changeLanguageKey,
   changeKeyboardKey,
   textKey,

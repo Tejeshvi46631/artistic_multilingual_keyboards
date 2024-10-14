@@ -184,26 +184,26 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
             ? englishUpperCaseAlphabetsQWERTY
             : englishLowerCaseAlphabetsQWERTY;
       }
-    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.urdu) {
-      if (widget.currentKeyboardsType == KeyboardsTypes.urduKeyboard1) {
-        keys = inverseKeys ? urduAlphabets2 : urduAlphabets1;
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.marathi) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.marathiKeyboard1) {
+        keys = inverseKeys ? marathiAlphabets2 : marathiAlphabets1;
         widget.currentKeyboardsType = inverseKeys
-            ? KeyboardsTypes.urduKeyboard2
-            : KeyboardsTypes.urduKeyboard1;
+            ? KeyboardsTypes.marathiKeyboard2
+            : KeyboardsTypes.marathiKeyboard1;
       } else {
-        keys = inverseKeys ? urduAlphabets1 : urduAlphabets2;
+        keys = inverseKeys ? marathiAlphabets1 : marathiAlphabets2;
         widget.currentKeyboardsType = inverseKeys
             ? KeyboardsTypes.urduKeyboard1
             : KeyboardsTypes.urduKeyboard2;
       }
-    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.sindhi) {
-      if (widget.currentKeyboardsType == KeyboardsTypes.sindhiKeyboard1) {
-        keys = inverseKeys ? sindhiAlphabets2 : sindhiAlphabets1;
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.hindhi) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.hindhiKeyboard1) {
+        keys = inverseKeys ? hindiAlphabets2 : hindiAlphabets1;
         widget.currentKeyboardsType = inverseKeys
             ? KeyboardsTypes.sindhiKeyboard2
             : KeyboardsTypes.sindhiKeyboard1;
       } else {
-        keys = inverseKeys ? sindhiAlphabets1 : sindhiAlphabets2;
+        keys = inverseKeys ? hindiAlphabets1 : hindiAlphabets2;
         widget.currentKeyboardsType = inverseKeys
             ? KeyboardsTypes.sindhiKeyboard1
             : KeyboardsTypes.sindhiKeyboard2;
@@ -244,8 +244,8 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
           children: [
             _getKey(
                 keyText: _getSecondaryKeyboardKeyText(),
-                keyType: /*(previousKeyboardType != null)?KeyTypes.symbolic1:*/ KeyTypes
-                    .changeKeyboardKey,
+                keyType: /*(previousKeyboardType != null)?KeyTypes.symbolic1:*/
+                    KeyTypes.changeKeyboardKey,
                 buttonFlex: 3),
             for (String keyT in list) _getKey(keyText: keyT, buttonFlex: 2),
             _getKey(keyText: "", keyType: KeyTypes.backSpace, buttonFlex: 3),
