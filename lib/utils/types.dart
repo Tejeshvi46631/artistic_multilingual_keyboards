@@ -5,7 +5,21 @@ enum KeyboardLanguages {
   sindhi,
   symbolic,
   marathi,
-  hindhi
+  hindi,
+  bengali,
+  gujarati,
+  malayalam,
+  kannada,
+  tamil,
+  telugu,
+  punjabi,
+  asame,
+  oriya,
+  santali,
+  nepali,
+  maithili
+  
+
   // numeric,
 }
 
@@ -23,7 +37,31 @@ enum KeyboardsTypes {
   hindhiKeyboard1,
   hindhiKeyboard2,
   marathiKeyboard1,
-  marathiKeyboard2
+  marathiKeyboard2,
+  bengaliKeyboard1,
+  bengaliKeyboard2,
+  gujaratiKeyboard1,
+  gujaratiKeyboard2,
+  malayalamKeyboard1,
+  malayalamKeyboard2,
+  kannadaKeyboard1,
+  kannadaKeyboard2,
+  tamilKeyboard1,
+  tamilKeyboard2,
+  teluguKeyboard1,
+  teluguKeyboard2,
+  punjabiKeyboard1,
+  asameKeyboard1,
+  oriyaKeyboard1,
+  santaliKeyboard1,
+  nepaliKeyboard1,
+  maithiliKeyboard1,
+  punjabiKeyboard2,
+  asameKeyboard2,
+  oriyaKeyboard2,
+  santaliKeyboard2,
+  nepaliKeyboard2,
+  maithiliKeyboard2,
 }
 
 /// All Keys Type

@@ -7,7 +7,7 @@ issue_tracker: https://github.com/kamran8545/artistic_multilingual_keyboards/iss
 documentation: https://github.com/kamran8545/artistic_multilingual_keyboards
 
 environment:
-  sdk: ">=2.16.2 <3.0.0"
+  sdk: ">=2.16.2 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

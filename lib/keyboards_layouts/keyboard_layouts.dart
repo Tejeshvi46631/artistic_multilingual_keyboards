@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/types.dart';
@@ -73,6 +75,38 @@ class KeyboardLayouts extends StatefulWidget {
       currentKeyboardsType = KeyboardsTypes.urduKeyboard2;
     } else if (currentKeyboardLanguage == KeyboardLanguages.sindhi) {
       currentKeyboardsType = KeyboardsTypes.sindhiKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.hindi) {
+      currentKeyboardsType = KeyboardsTypes.hindhiKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.marathi) {
+      currentKeyboardsType = KeyboardsTypes.marathiKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.bengali) {
+      currentKeyboardsType = KeyboardsTypes.bengaliKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.bengali) {
+      currentKeyboardsType = KeyboardsTypes.bengaliKeyboard2;
+    }
+    // languages add
+    else if (currentKeyboardLanguage == KeyboardLanguages.gujarati) {
+      currentKeyboardsType = KeyboardsTypes.gujaratiKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.kannada) {
+      currentKeyboardsType = KeyboardsTypes.kannadaKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.tamil) {
+      currentKeyboardsType = KeyboardsTypes.tamilKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.malayalam) {
+      currentKeyboardsType = KeyboardsTypes.malayalamKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.telugu) {
+      currentKeyboardsType = KeyboardsTypes.teluguKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.punjabi) {
+      currentKeyboardsType = KeyboardsTypes.punjabiKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.asame) {
+      currentKeyboardsType = KeyboardsTypes.asameKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.oriya) {
+      currentKeyboardsType = KeyboardsTypes.oriyaKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.santali) {
+      currentKeyboardsType = KeyboardsTypes.santaliKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.maithili) {
+      currentKeyboardsType = KeyboardsTypes.maithiliKeyboard2;
+    } else if (currentKeyboardLanguage == KeyboardLanguages.nepali) {
+      currentKeyboardsType = KeyboardsTypes.nepaliKeyboard2;
     } else if (currentKeyboardLanguage == KeyboardLanguages.symbolic) {
       currentKeyboardsType = KeyboardsTypes.symbolic2;
     }
@@ -184,7 +218,35 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
             ? englishUpperCaseAlphabetsQWERTY
             : englishLowerCaseAlphabetsQWERTY;
       }
-    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.marathi) {
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.urdu) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.urduKeyboard1) {
+        keys = inverseKeys ? urduAlphabets2 : urduAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.urduKeyboard2
+            : KeyboardsTypes.urduKeyboard1;
+      } else {
+        keys = inverseKeys ? urduAlphabets1 : urduAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.urduKeyboard1
+            : KeyboardsTypes.urduKeyboard2;
+      }
+    }
+    //hindi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.hindi) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.hindhiKeyboard1) {
+        keys = inverseKeys ? hindiAlphabets2 : hindiAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.hindhiKeyboard2
+            : KeyboardsTypes.hindhiKeyboard1;
+      } else {
+        keys = inverseKeys ? hindiAlphabets1 : hindiAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.hindhiKeyboard1
+            : KeyboardsTypes.hindhiKeyboard2;
+      }
+    }
+    // marathi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.marathi) {
       if (widget.currentKeyboardsType == KeyboardsTypes.marathiKeyboard1) {
         keys = inverseKeys ? marathiAlphabets2 : marathiAlphabets1;
         widget.currentKeyboardsType = inverseKeys
@@ -193,17 +255,189 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
       } else {
         keys = inverseKeys ? marathiAlphabets1 : marathiAlphabets2;
         widget.currentKeyboardsType = inverseKeys
-            ? KeyboardsTypes.urduKeyboard1
-            : KeyboardsTypes.urduKeyboard2;
+            ? KeyboardsTypes.marathiKeyboard1
+            : KeyboardsTypes.marathiKeyboard2;
       }
-    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.hindhi) {
-      if (widget.currentKeyboardsType == KeyboardsTypes.hindhiKeyboard1) {
-        keys = inverseKeys ? hindiAlphabets2 : hindiAlphabets1;
+    }
+    // BEngali
+
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.bengali) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.bengaliKeyboard1) {
+        keys = inverseKeys ? bengaliAlphabets2 : bengaliAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.bengaliKeyboard2
+            : KeyboardsTypes.bengaliKeyboard1;
+      } else {
+        keys = inverseKeys ? bengaliAlphabets1 : bengaliAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.bengaliKeyboard1
+            : KeyboardsTypes.bengaliKeyboard2;
+      }
+    }
+    //gujrat
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.gujarati) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.gujaratiKeyboard1) {
+        keys = inverseKeys ? gujaratiAlphabets2 : gujaratiAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.gujaratiKeyboard2
+            : KeyboardsTypes.gujaratiKeyboard1;
+      } else {
+        keys = inverseKeys ? gujaratiAlphabets1 : gujaratiAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.gujaratiKeyboard1
+            : KeyboardsTypes.gujaratiKeyboard2;
+      }
+    }
+    //punjabi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.punjabi) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.punjabiKeyboard1) {
+        keys = inverseKeys ? punjabiAlphabets2 : punjabiAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.punjabiKeyboard2
+            : KeyboardsTypes.punjabiKeyboard1;
+      } else {
+        keys = inverseKeys ? punjabiAlphabets1 : punjabiAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.punjabiKeyboard1
+            : KeyboardsTypes.punjabiKeyboard2;
+      }
+    }
+    //nepali
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.nepali) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.nepaliKeyboard1) {
+        keys = inverseKeys ? nepaliAlphabets2 : nepaliAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.nepaliKeyboard2
+            : KeyboardsTypes.nepaliKeyboard1;
+      } else {
+        keys = inverseKeys ? nepaliAlphabets1 : nepaliAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.nepaliKeyboard1
+            : KeyboardsTypes.nepaliKeyboard2;
+      }
+    }
+    //mathili
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.maithili) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.maithiliKeyboard1) {
+        keys = inverseKeys ? maithiliAlphabets2 : maithiliAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.maithiliKeyboard2
+            : KeyboardsTypes.maithiliKeyboard1;
+      } else {
+        keys = inverseKeys ? maithiliAlphabets1 : maithiliAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.maithiliKeyboard1
+            : KeyboardsTypes.maithiliKeyboard2;
+      }
+    }
+    //oriya
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.oriya) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.oriyaKeyboard1) {
+        keys = inverseKeys ? odiaAlphabets2 : odiaAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.oriyaKeyboard2
+            : KeyboardsTypes.oriyaKeyboard1;
+      } else {
+        keys = inverseKeys ? odiaAlphabets1 : odiaAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.oriyaKeyboard1
+            : KeyboardsTypes.oriyaKeyboard2;
+      }
+    }
+    //asame
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.asame) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.asameKeyboard1) {
+        keys = inverseKeys ? assameseAlphabets2 : assameseAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.asameKeyboard2
+            : KeyboardsTypes.asameKeyboard1;
+      } else {
+        keys = inverseKeys ? assameseAlphabets1 : assameseAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.asameKeyboard1
+            : KeyboardsTypes.asameKeyboard2;
+      }
+    }
+    //santali
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.santali) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.santaliKeyboard1) {
+        keys = inverseKeys ? santaliAlphabets2 : santaliAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.santaliKeyboard2
+            : KeyboardsTypes.santaliKeyboard1;
+      } else {
+        keys = inverseKeys ? santaliAlphabets1 : santaliAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.santaliKeyboard1
+            : KeyboardsTypes.santaliKeyboard2;
+      }
+    }
+
+    // telgu
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.telugu) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.teluguKeyboard1) {
+        keys = inverseKeys ? teluguAlphabets2 : teluguAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.teluguKeyboard2
+            : KeyboardsTypes.teluguKeyboard1;
+      } else {
+        keys = inverseKeys ? teluguAlphabets1 : teluguAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.teluguKeyboard1
+            : KeyboardsTypes.teluguKeyboard2;
+      }
+    }
+    //malaylam
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.malayalam) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.malayalamKeyboard1) {
+        keys = inverseKeys ? malayalamAlphabets2 : malayalamAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.malayalamKeyboard2
+            : KeyboardsTypes.malayalamKeyboard1;
+      } else {
+        keys = inverseKeys ? malayalamAlphabets1 : malayalamAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.malayalamKeyboard1
+            : KeyboardsTypes.malayalamKeyboard2;
+      }
+    }
+    //kanada
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.kannada) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.kannadaKeyboard1) {
+        keys = inverseKeys ? kannadaAlphabets2 : kannadaAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.kannadaKeyboard2
+            : KeyboardsTypes.kannadaKeyboard1;
+      } else {
+        keys = inverseKeys ? kannadaAlphabets1 : kannadaAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.kannadaKeyboard1
+            : KeyboardsTypes.kannadaKeyboard2;
+      }
+    }
+    // telgu
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.tamil) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.tamilKeyboard1) {
+        keys = inverseKeys ? tamilAlphabets2 : tamilAlphabets1;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.tamilKeyboard2
+            : KeyboardsTypes.tamilKeyboard1;
+      } else {
+        keys = inverseKeys ? tamilAlphabets1 : tamilAlphabets2;
+        widget.currentKeyboardsType = inverseKeys
+            ? KeyboardsTypes.tamilKeyboard1
+            : KeyboardsTypes.tamilKeyboard2;
+      }
+    }
+    //sindhi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.sindhi) {
+      if (widget.currentKeyboardsType == KeyboardsTypes.sindhiKeyboard1) {
+        keys = inverseKeys ? sindhiAlphabets2 : sindhiAlphabets1;
         widget.currentKeyboardsType = inverseKeys
             ? KeyboardsTypes.sindhiKeyboard2
             : KeyboardsTypes.sindhiKeyboard1;
       } else {
-        keys = inverseKeys ? hindiAlphabets1 : hindiAlphabets2;
+        keys = inverseKeys ? sindhiAlphabets1 : sindhiAlphabets2;
         widget.currentKeyboardsType = inverseKeys
             ? KeyboardsTypes.sindhiKeyboard1
             : KeyboardsTypes.sindhiKeyboard2;
@@ -460,7 +694,122 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
     } else if (widget.currentKeyboardLanguage == KeyboardLanguages.sindhi &&
         widget.currentKeyboardsType == KeyboardsTypes.sindhiKeyboard2) {
       return "ا ب پ";
-    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.symbolic &&
+    }
+    //hindhi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.hindi &&
+        widget.currentKeyboardsType == KeyboardsTypes.hindhiKeyboard1) {
+      return "कखग";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.hindi &&
+        widget.currentKeyboardsType == KeyboardsTypes.hindhiKeyboard2) {
+      return "कखग";
+    }
+    //marathi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.marathi &&
+        widget.currentKeyboardsType == KeyboardsTypes.marathiKeyboard1) {
+      return "कखग";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.marathi &&
+        widget.currentKeyboardsType == KeyboardsTypes.marathiKeyboard2) {
+      return "कखग";
+    }
+    //Bengali
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.bengali &&
+        widget.currentKeyboardsType == KeyboardsTypes.bengaliKeyboard1) {
+      return "কখগ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.bengali &&
+        widget.currentKeyboardsType == KeyboardsTypes.bengaliKeyboard2) {
+      return "কখগ";
+    }
+    //guju
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.gujarati &&
+        widget.currentKeyboardsType == KeyboardsTypes.gujaratiKeyboard1) {
+      return "કખગ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.gujarati &&
+        widget.currentKeyboardsType == KeyboardsTypes.gujaratiKeyboard2) {
+      return "કખગ";
+    }
+    //punjabi
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.punjabi &&
+        widget.currentKeyboardsType == KeyboardsTypes.punjabiKeyboard1) {
+      return "ਅ ਆਇ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.punjabi &&
+        widget.currentKeyboardsType == KeyboardsTypes.punjabiKeyboard2) {
+      return "ਅ ਆਇ";
+    }
+    //nepali
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.nepali &&
+        widget.currentKeyboardsType == KeyboardsTypes.nepaliKeyboard1) {
+      return "औक";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.nepali &&
+        widget.currentKeyboardsType == KeyboardsTypes.nepaliKeyboard2) {
+      return "औक";
+    }
+    //maithali
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.maithili &&
+        widget.currentKeyboardsType == KeyboardsTypes.maithiliKeyboard1) {
+      return "अआइ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.maithili &&
+        widget.currentKeyboardsType == KeyboardsTypes.maithiliKeyboard2) {
+      return "अआइ";
+    }
+    //oriya
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.oriya &&
+        widget.currentKeyboardsType == KeyboardsTypes.oriyaKeyboard1) {
+      return "ଅଆଇ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.oriya &&
+        widget.currentKeyboardsType == KeyboardsTypes.oriyaKeyboard2) {
+      return "ଅଆଇ";
+    }
+    //ssanath
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.santali &&
+        widget.currentKeyboardsType == KeyboardsTypes.santaliKeyboard1) {
+      return "ᱚᱛᱜ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.santali &&
+        widget.currentKeyboardsType == KeyboardsTypes.santaliKeyboard2) {
+      return "ᱚᱛᱜ";
+    }
+    //asami
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.asame &&
+        widget.currentKeyboardsType == KeyboardsTypes.asameKeyboard1) {
+      return "অআই";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.asame &&
+        widget.currentKeyboardsType == KeyboardsTypes.asameKeyboard2) {
+      return "অআই";
+    }
+    //telgu
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.telugu &&
+        widget.currentKeyboardsType == KeyboardsTypes.teluguKeyboard1) {
+      return "అఆఇ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.telugu &&
+        widget.currentKeyboardsType == KeyboardsTypes.teluguKeyboard2) {
+      return "అఆఇ";
+    }
+    //tamil
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.tamil &&
+        widget.currentKeyboardsType == KeyboardsTypes.tamilKeyboard1) {
+      return "கஙச";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.tamil &&
+        widget.currentKeyboardsType == KeyboardsTypes.tamilKeyboard2) {
+      return "கஙச";
+    }
+    //malaylam
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.malayalam &&
+        widget.currentKeyboardsType == KeyboardsTypes.malayalamKeyboard1) {
+      return "കഖഗ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.malayalam &&
+        widget.currentKeyboardsType == KeyboardsTypes.malayalamKeyboard2) {
+      return "കഖഗ";
+    }
+    //kanada
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.kannada &&
+        widget.currentKeyboardsType == KeyboardsTypes.kannadaKeyboard1) {
+      return "ಅಆಇ";
+    } else if (widget.currentKeyboardLanguage == KeyboardLanguages.kannada &&
+        widget.currentKeyboardsType == KeyboardsTypes.kannadaKeyboard2) {
+      return "ಅಆಇ";
+    } 
+    
+    
+    else if (widget.currentKeyboardLanguage == KeyboardLanguages.symbolic &&
         widget.currentKeyboardsType == KeyboardsTypes.symbolic1) {
       return "+/-";
     } else if (widget.currentKeyboardLanguage == KeyboardLanguages.symbolic &&
@@ -484,7 +833,126 @@ class _KeyboardLayoutsState extends State<KeyboardLayouts> {
     } else if (previousKeyboardLanguages == KeyboardLanguages.sindhi &&
         previousKeyboardType == KeyboardsTypes.sindhiKeyboard2) {
       return "ڙ ڏ ڊ";
-    } else if (previousKeyboardLanguages == KeyboardLanguages.english &&
+    }
+    // hindi
+    else if (previousKeyboardLanguages == KeyboardLanguages.hindi &&
+        previousKeyboardType == KeyboardsTypes.hindhiKeyboard1) {
+      return "ग ख क";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.hindi &&
+        previousKeyboardType == KeyboardsTypes.hindhiKeyboard2) {
+      return "ग ख क";
+    }
+    // marathi
+    else if (previousKeyboardLanguages == KeyboardLanguages.marathi &&
+        previousKeyboardType == KeyboardsTypes.marathiKeyboard1) {
+      return "ग ख क";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.marathi &&
+        previousKeyboardType == KeyboardsTypes.marathiKeyboard2) {
+      return "ग ख क";
+    }
+    //Gujrati
+    else if (previousKeyboardLanguages == KeyboardLanguages.gujarati &&
+        previousKeyboardType == KeyboardsTypes.gujaratiKeyboard1) {
+      return "કખગ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.gujarati &&
+        previousKeyboardType == KeyboardsTypes.gujaratiKeyboard2) {
+      return "કખગ";
+    }
+    //tamil
+    else if (previousKeyboardLanguages == KeyboardLanguages.tamil &&
+        previousKeyboardType == KeyboardsTypes.tamilKeyboard1) {
+      return "கஙச";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.tamil &&
+        previousKeyboardType == KeyboardsTypes.tamilKeyboard2) {
+      return "கஙச";
+    }
+    //telegu
+    else if (previousKeyboardLanguages == KeyboardLanguages.telugu &&
+        previousKeyboardType == KeyboardsTypes.teluguKeyboard1) {
+      return "అఆఇ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.telugu &&
+        previousKeyboardType == KeyboardsTypes.teluguKeyboard2) {
+      return "అఆఇ";
+    }
+    //kanada
+    else if (previousKeyboardLanguages == KeyboardLanguages.kannada &&
+        previousKeyboardType == KeyboardsTypes.kannadaKeyboard1) {
+      return "ಅಆಇ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.kannada &&
+        previousKeyboardType == KeyboardsTypes.kannadaKeyboard2) {
+      return "ಅಆಇ";
+    }
+    //malaylam
+    else if (previousKeyboardLanguages == KeyboardLanguages.malayalam &&
+        previousKeyboardType == KeyboardsTypes.malayalamKeyboard1) {
+      return "കഖഗ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.malayalam &&
+        previousKeyboardType == KeyboardsTypes.malayalamKeyboard2) {
+      return "കഖഗ";
+    }
+    //
+    //bengali
+
+    else if (previousKeyboardLanguages == KeyboardLanguages.bengali &&
+        previousKeyboardType == KeyboardsTypes.bengaliKeyboard1) {
+      return "কখগ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.bengali &&
+        previousKeyboardType == KeyboardsTypes.bengaliKeyboard2) {
+      return "কখগ";
+    } 
+
+    //asami1
+       else if (previousKeyboardLanguages == KeyboardLanguages.asame &&
+        previousKeyboardType == KeyboardsTypes.asameKeyboard1) {
+      return "অআই";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.asame &&
+        previousKeyboardType == KeyboardsTypes.asameKeyboard2) {
+      return "অআই";
+    } 
+
+    //nepali2
+       else if (previousKeyboardLanguages == KeyboardLanguages.nepali &&
+        previousKeyboardType == KeyboardsTypes.nepaliKeyboard1) {
+      return "औक";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.nepali &&
+        previousKeyboardType == KeyboardsTypes.nepaliKeyboard2) {
+      return "औक";
+    } 
+       //santali3
+       else if (previousKeyboardLanguages == KeyboardLanguages.santali &&
+        previousKeyboardType == KeyboardsTypes.santaliKeyboard1) {
+      return "ᱚᱛᱜ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.santali &&
+        previousKeyboardType == KeyboardsTypes.santaliKeyboard2) {
+      return "ᱚᱛᱜ";
+    } 
+    //punjabi4
+       else if (previousKeyboardLanguages == KeyboardLanguages.punjabi &&
+        previousKeyboardType == KeyboardsTypes.punjabiKeyboard1) {
+      return"ਅ ਆਇ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.punjabi &&
+        previousKeyboardType == KeyboardsTypes.punjabiKeyboard2) {
+      return "ਅ ਆਇ";
+    } 
+    //oriya5
+       else if (previousKeyboardLanguages == KeyboardLanguages.oriya &&
+        previousKeyboardType == KeyboardsTypes.oriyaKeyboard1) {
+      return "अआइ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.oriya &&
+        previousKeyboardType == KeyboardsTypes.oriyaKeyboard2) {
+      return "अआइ";
+    } 
+    //maithili6
+       else if (previousKeyboardLanguages == KeyboardLanguages.maithili &&
+        previousKeyboardType == KeyboardsTypes.maithiliKeyboard1) {
+      return "ଅଆଇ";
+    } else if (previousKeyboardLanguages == KeyboardLanguages.maithili &&
+        previousKeyboardType == KeyboardsTypes.maithiliKeyboard2) {
+      return "ଅଆଇ";
+    } 
+    
+    
+    else if (previousKeyboardLanguages == KeyboardLanguages.english &&
         previousKeyboardType == KeyboardsTypes.englishLowerCase) {
       return "ABC";
     } else if (previousKeyboardLanguages == KeyboardLanguages.english &&
